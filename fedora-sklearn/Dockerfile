@@ -9,9 +9,9 @@ RUN dnf install -y gcc-gfortran gcc-c++ autoconf make
 # Generic tools
 RUN dnf install -y xterm screen bc git vim wget procps-ng
 # Python2 packages
-RUN dnf install -y python-pip python-scikit-learn opencv-python python-pandas python-psycopg2 python-pillow python-scikit-image python-statsmodels python-matplotlib python-pandas python-scikit-image python-setuptools python-crypto python-backports-ssl_match_hostname python-theano 
+RUN dnf install -y python-pip python-scikit-learn opencv-python python-pandas python-psycopg2 python-pillow python-scikit-image python-statsmodels python-matplotlib python-pandas python-scikit-image python-setuptools python-crypto python-backports-ssl_match_hostname python-theano h5py pyephem
 # Unpackaged python tools
-RUN ( pip install nolearn ; pip install lasagne ; pip install xgboost ; pip install holidays; pip install git+https://github.com/dnouri/nolearn.git@master#egg=nolearn==0.7.git )
+RUN ( pip install nolearn ; pip install lasagne ; pip install xgboost ; pip install holidays; pip install git+https://github.com/dnouri/nolearn.git@master#egg=nolearn==0.7.git ; pip install seaborn )
 # Editors, dev tools
 RUN dnf install -y eclipse-pydev  dejavu-lgc-sans-mono-fonts dejavu-lgc-serif-fonts dejavu-lgc-sans-fonts dejavu-serif-fonts dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-fonts-common liberation-fonts.noarch liberation-fonts-common.noarch liberation-narrow-fonts.noarch liberation-mono-fonts.noarch liberation-sans-fonts.noarch liberation-serif-fonts.noarch
 # CUDA ENV
